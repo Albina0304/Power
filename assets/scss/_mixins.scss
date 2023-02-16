@@ -1,0 +1,15 @@
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  @mixin media-down ($breakpoints) {
+    @media (max-width: $breakpoints) {
+      @content;
+    }
+  }
+  @mixin media-up ($breakpoints) {
+    @media (min-width: $breakpoints) {
+      @content;
+    }
+  }

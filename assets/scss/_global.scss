@@ -1,0 +1,72 @@
+* {
+	box-sizing: border-box;
+}
+.container {
+    max-width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+	font-size: $base-size;
+	color: $body;
+	margin: 0;
+    background-color: $background;
+}
+a {
+    text-decoration: none;
+}
+img {
+	max-width: 100%;
+    display: block;
+}
+p {
+    font-weight: 400;
+    font-size: $text-size;
+    line-height: 36px;
+    color: $body;
+    margin: 0;
+}
+ul {
+    list-style-type: none;
+}
+h1 {
+    font-weight: 700;
+	font-size: 60px;
+	line-height: 110px;
+	margin: 0;
+    color: $color-title;
+}
+h2 {
+    font-weight: 700;
+	font-size: 40px;
+	line-height: 52px;
+    letter-spacing: 0.2px;
+	margin: 0;
+    color: $color-title;
+}
+h3 {
+    font-weight: 700;
+	font-size: 24px;
+	line-height: 36px;
+	margin: 0;
+    color: $color-title;
+}
+h4 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+	margin: 0;
+    color: $color-title;
+}
+h5 {
+    font-weight: 700;
+	font-size: 18px;
+	line-height: 28px;
+	margin: 0;
+    color: $body;
+}
+.section {
+    margin: 120px 0;
+}

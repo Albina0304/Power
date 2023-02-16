@@ -1,0 +1,32 @@
+.header {
+    font-family: 'Inter', sans-serif;
+    margin-top: 32px;
+    &-global {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 80%;
+    }
+    &-navbar {
+        margin: 0 -30px;
+    }
+    &-nav {
+        @include reset-list;
+        display: flex;
+        & li {
+            padding: 0 30px;
+        }
+        & a {
+            line-height: 28px;
+            color: $color-title;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+    &-logo {
+        & .brand {
+            display: inline-block;
+        }
+    }
+}
