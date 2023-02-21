@@ -4,24 +4,33 @@
         position: relative;
         z-index: 1;
     }
+    &-modal {
+        & iframe {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        & .btn-close {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: -30px;
+        }
+    }
     &-img {
         &-bg {
             position: absolute;
             z-index: 1;
-            right: 60px;
-            top: 90px;
+            bottom: 0;
+            right: -5px;
+            & img {
+                max-width: 85%;
+            }
         }
         &-global {
             position: relative;
             z-index: 1;
-            top: -50px;
+            bottom: 20px;
         }
-        // &-dependent {
-        //     position: absolute;
-        //     top: 0;
-        //     display: flex;
-        //     flex-direction: row-reverse;
-        // }
         &-second {
             position: absolute;
             z-index: 1;
@@ -39,7 +48,6 @@
                 top: -15px;
                 left: -15px;
                 opacity: 0.9;
-                // box-shadow: 0px 6px 20px rgb(43 44 52 / 20%);
             }
         }
         &-first {
@@ -78,6 +86,12 @@
                 left: -9px;
             }
         }
+        &-local {
+            position: absolute;
+            z-index: 1;
+            bottom: -100px;
+            left: 90px;
+        }
     }
     &-products {
         display: inline-block;
@@ -96,8 +110,8 @@
                 content: '';
                 border: 8px solid #706FE5;
                 border-radius: 50%;
-                width: 15px;
-                height: 15px;
+                width: 28px;
+                height: 28px;
                 position: absolute;
                 z-index: 2;
                 right: -17px;
@@ -108,8 +122,8 @@
                 content: '';
                 border: 8px solid #706FE5;
                 border-radius: 50%;
-                width: 15px;
-                height: 15px;
+                width: 28px;
+                height: 28px;
                 position: absolute;
                 z-index: 2;
                 left: -17px;
@@ -121,56 +135,68 @@
     &-background {
         position: relative;
         z-index: 1;
-        // border-radius: 20px;
-        // border: 8px solid $primary-color;
         &::after {
             content: '';
             border: 8px solid #706FE5;
             border-radius: 50%;
-            width: 15px;
-            height: 15px;
+            width: 28px;
+            height: 28px;
             position: absolute;
             z-index: 2;
-            right: -13px;
-            bottom: -23px;
+            right: -9px;
+            bottom: -25px;
             background-color: $background;
         }
         &::before {
             content: '';
             border: 8px solid #706FE5;
             border-radius: 50%;
-            width: 15px;
-            height: 15px;
+            width: 28px;
+            height: 28px;
             position: absolute;
             z-index: 2;
-            bottom: -24px;
-            left: -381px;
+            bottom: -25px;
+            left: -364px;
             background-color: $background;
         }
     }
     &-colon-left {
         max-width: 60%;
-        // padding-right: 50px;
     }
     &-colon-right {
         max-width: 40%;
-        padding-left: 50px;
+        position: relative;
+        z-index: 1;
         &-images {
-            position: fixed;
+            position: relative;
+            z-index: 1;
         }
     }
     .section-button {
         padding: 0 17px;
+        display: flex;
+        align-items: center;
         &-wrapper {
             display: flex;
             margin: 0 -17px;
         }
     }
-    &-title {
-        margin-bottom: 42px;
-    }
   
     &-text {
         margin: 42px 0 24px;
     }
+    & .modal-content {
+        background-color: transparent;
+        border: none;
+        margin-top: 40px;
+    }
+}
+.btn-video {
+    display: flex;
+    font-size: 16px;
+    line-height: 24px;
+    color: $body;
+    flex-wrap: wrap;
+    max-width: 146px;
+    padding: 0 6px;
 }

@@ -1,7 +1,5 @@
 .btn {
-	// border: 2px solid $border-btn;
     border-radius: 12px;
-    // padding: 10px 40px;
 	background-color: transparent;
 	display: inline-block;
 	font-size: 16px;
@@ -16,26 +14,15 @@
         font-size: 18px;
         line-height: 27px;
         padding: 10px 40px;
-		// color: $text;
-        // &:hover {
-		// background-color: $background;
-		// color: $primary-color;
-        // border: 2px solid $primary-color;
-	    // }
+        &:hover {
+		background-color: $background;
+		color: $primary-color;
+        border: 2px solid $primary-color;
+	    }
 	}
     &-primary {
         color: $body;
         display: flex;
+		align-items: center;
     }
-	// &-sm {
-	// 	font-size: 16px;
-	// 	line-height: 28px;
-	// 	// color: $white;
-	// 	// background-color: $text;
-	// 	border-radius: 30px;
-	// 	padding: 11px 32px;
-	// }
-	// &-primary {
-	// 	--bs-btn-hover-border-color: rgba(255, 255, 255, 0.29);
-	// }
 }

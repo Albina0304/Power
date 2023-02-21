@@ -4,7 +4,7 @@
     &-global {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: baseline;
         max-width: 80%;
     }
     &-navbar {
@@ -28,5 +28,9 @@
         & .brand {
             display: inline-block;
         }
+    }
+    & .header-navigation {
+        display: flex;
+        padding-left: 0;
     }
 }

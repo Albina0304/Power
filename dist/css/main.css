@@ -14,9 +14,14 @@
     font-size: 18px;
     line-height: 27px;
     padding: 10px 40px; }
+    .btn-secondary:hover {
+      background-color: #FFFFFF;
+      color: #706FE5;
+      border: 2px solid #706FE5; }
   .btn-primary {
     color: #2E3E5C;
-    display: flex; }
+    display: flex;
+    align-items: center; }
 
 * {
   box-sizing: border-box; }
@@ -33,6 +38,9 @@ body {
   color: #2E3E5C;
   margin: 0;
   background-color: #FFFFFF; }
+
+.wrapper {
+  overflow: hidden; }
 
 a {
   text-decoration: none; }
@@ -96,7 +104,7 @@ h5 {
   .header-global {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     max-width: 80%; }
   .header-navbar {
     margin: 0 -30px; }
@@ -114,20 +122,33 @@ h5 {
         color: #706FE5; }
   .header-logo .brand {
     display: inline-block; }
+  .header .header-navigation {
+    display: flex;
+    padding-left: 0; }
 
 .hero-global {
   display: flex;
   position: relative;
   z-index: 1; }
+.hero-modal iframe {
+  max-width: 100%;
+  border-radius: 10px; }
+.hero-modal .btn-close {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: -30px; }
 .hero-img-bg {
   position: absolute;
   z-index: 1;
-  right: 60px;
-  top: 90px; }
+  bottom: 0;
+  right: -5px; }
+  .hero-img-bg img {
+    max-width: 85%; }
 .hero-img-global {
   position: relative;
   z-index: 1;
-  top: -50px; }
+  bottom: 20px; }
 .hero-img-second {
   position: absolute;
   z-index: 1;
@@ -177,6 +198,11 @@ h5 {
     height: 47px;
     top: -9px;
     left: -9px; }
+.hero-img-local {
+  position: absolute;
+  z-index: 1;
+  bottom: -100px;
+  left: 90px; }
 .hero-products {
   display: inline-block; }
   .hero-products-link {
@@ -194,8 +220,8 @@ h5 {
       content: '';
       border: 8px solid #706FE5;
       border-radius: 50%;
-      width: 15px;
-      height: 15px;
+      width: 28px;
+      height: 28px;
       position: absolute;
       z-index: 2;
       right: -17px;
@@ -205,8 +231,8 @@ h5 {
       content: '';
       border: 8px solid #706FE5;
       border-radius: 50%;
-      width: 15px;
-      height: 15px;
+      width: 28px;
+      height: 28px;
       position: absolute;
       z-index: 2;
       left: -17px;
@@ -219,39 +245,54 @@ h5 {
     content: '';
     border: 8px solid #706FE5;
     border-radius: 50%;
-    width: 15px;
-    height: 15px;
+    width: 28px;
+    height: 28px;
     position: absolute;
     z-index: 2;
-    right: -13px;
-    bottom: -23px;
+    right: -9px;
+    bottom: -25px;
     background-color: #FFFFFF; }
   .hero-background::before {
     content: '';
     border: 8px solid #706FE5;
     border-radius: 50%;
-    width: 15px;
-    height: 15px;
+    width: 28px;
+    height: 28px;
     position: absolute;
     z-index: 2;
-    bottom: -24px;
-    left: -381px;
+    bottom: -25px;
+    left: -364px;
     background-color: #FFFFFF; }
 .hero-colon-left {
   max-width: 60%; }
 .hero-colon-right {
   max-width: 40%;
-  padding-left: 50px; }
+  position: relative;
+  z-index: 1; }
   .hero-colon-right-images {
-    position: fixed; }
+    position: relative;
+    z-index: 1; }
 .hero .section-button {
-  padding: 0 17px; }
+  padding: 0 17px;
+  display: flex;
+  align-items: center; }
   .hero .section-button-wrapper {
     display: flex;
     margin: 0 -17px; }
-.hero-title {
-  margin-bottom: 42px; }
 .hero-text {
   margin: 42px 0 24px; }
+.hero .modal-content {
+  background-color: transparent;
+  border: none;
+  margin-top: 40px; }
+
+.btn-video {
+  display: flex;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2E3E5C;
+  flex-wrap: wrap;
+  max-width: 146px;
+  padding: 0 6px; }
 
 /*# sourceMappingURL=main.css.map */
