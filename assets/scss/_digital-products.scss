@@ -1,0 +1,48 @@
+.digital-products {
+    &-global {
+        display: flex;
+    }
+    &-left,
+    &-right {
+        max-width: 50%;
+    }
+    &-left {
+        &-image {
+            margin-bottom: 14px;
+        }
+        &-title {
+            margin: 10px 0 12px;
+        }
+        &-text {
+            p {
+                font-size: 14px;
+                line-height: 26px;
+                font-family: 'Poppins';
+            }
+        }
+    }
+    &-right {
+        max-width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        
+        &-col {
+            max-width: 50%;
+            padding-left: 30px;
+            font-family: 'Poppins';
+        }
+    }
+    &-title {
+        margin-bottom: 14px;
+    }
+    &-text {
+        margin-bottom: 40px;
+    }
+    &-app {
+        p {
+            font-size: 14px;
+            line-height: 26px;
+            font-family: 'Poppins';
+        }
+    }
+}

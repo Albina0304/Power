@@ -136,5 +136,103 @@
         </div>
     </div>
 </section>
-
+<section class=" section digital-products">
+    <div class="container">
+        <div class="digital-products-title">
+            <h2>
+                <?php echo get_field('digital_products_title')?>
+            </h2>
+        </div>
+        <div class="digital-products-text">
+            <?php echo get_field('digital_products_text')?>
+        </div>
+        <div class="digital-products-global">
+            <div class="digital-products-left">
+                <div class="digital-products-left-image">
+                    <a href="#">
+                        <?php $image = get_field('digital_products_left_image');?>
+                        <img src="<?php echo $image['url'];?>">
+                    </a>
+                </div>
+                <span class="digital-products-app">
+                    <?php echo get_field('digital_products_app')?>
+                </span>
+                <div class="digital-products-left-title">
+                    <h3>
+                        <?php echo get_field('digital_products_left_title')?>
+                    </h3>
+                </div>
+                <div class="digital-products-left-text">
+                    <?php echo get_field('digital_products_left_text')?>
+                </div>
+            </div>
+            <div class="digital-products-right">
+                <div class="digital-products-right-col">
+                    <div class="digital-products-right-img-first">
+                        <a href="#">
+                            <?php $image = get_field('вigital_products_right_img_first');?>
+                            <img src="<?php echo $image['url'];?>">
+                        </a>
+                    </div>
+                    <span class="digital-products-app">
+                        <?php echo get_field('digital_products_app')?>
+                    </span>
+                    <div class="digital-products-right-first-title">
+                        <h5>
+                            <?php echo get_field('вigital_products_right_first_title')?>
+                        </h5>
+                    </div>
+                </div>
+                <div class="digital-products-right-col">
+                    <div class="digital-products-right-img-second">
+                        <a href="#">
+                            <?php $image = get_field('вigital_products_right_img_second');?>
+                            <img src="<?php echo $image['url'];?>">
+                        </a>
+                    </div>
+                    <span class="digital-products-app">
+                        <?php echo get_field('digital_products_app')?>
+                    </span>
+                    <div class="digital-products-right-second-title">
+                        <h5>
+                            <?php echo get_field('вigital_products_right_second_title')?>
+                        </h5>
+                    </div>
+                </div>
+                <div class="digital-products-right-col">
+                    <div class="digital-products-right-img-third">
+                        <a href="#">
+                            <?php $image = get_field('вigital_products_right_img_third');?>
+                            <img src="<?php echo $image['url'];?>">
+                        </a>
+                    </div>
+                    <span class="digital-products-app">
+                        <?php echo get_field('digital_products_app')?>
+                    </span>
+                    <div class="digital-products-right-third-title">
+                        <h5>
+                            <?php echo get_field('вigital_products_right_third_title')?>
+                        </h5>
+                    </div>
+                </div>
+                <div class="digital-products-right-col">
+                    <div class="digital-products-right-img-fourth">
+                        <a href="#">
+                            <?php $image = get_field('вigital_products_right_img_fourth');?>
+                            <img src="<?php echo $image['url'];?>">
+                        </a>
+                    </div>
+                    <span class="digital-products-app">
+                        <?php echo get_field('digital_products_app')?>
+                    </span>
+                    <div class="digital-products-right-fourth-title">
+                        <h5>
+                            <?php echo get_field('вigital_products_right_fourth_title')?>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <?php get_footer();?>
