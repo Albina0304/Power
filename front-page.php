@@ -170,7 +170,7 @@
                 <div class="digital-products-right-col">
                     <div class="digital-products-right-img-first">
                         <a href="#">
-                            <?php $image = get_field('вigital_products_right_img_first');?>
+                            <?php $image = get_field('digital_products_right_img_first');?>
                             <img src="<?php echo $image['url'];?>">
                         </a>
                     </div>
@@ -179,14 +179,14 @@
                     </span>
                     <div class="digital-products-right-first-title">
                         <h5>
-                            <?php echo get_field('вigital_products_right_first_title')?>
+                            <?php echo get_field('digital_products_right_first_title')?>
                         </h5>
                     </div>
                 </div>
                 <div class="digital-products-right-col">
                     <div class="digital-products-right-img-second">
                         <a href="#">
-                            <?php $image = get_field('вigital_products_right_img_second');?>
+                            <?php $image = get_field('digital_products_right_img_second');?>
                             <img src="<?php echo $image['url'];?>">
                         </a>
                     </div>
@@ -195,14 +195,14 @@
                     </span>
                     <div class="digital-products-right-second-title">
                         <h5>
-                            <?php echo get_field('вigital_products_right_second_title')?>
+                            <?php echo get_field('digital_products_right_second_title')?>
                         </h5>
                     </div>
                 </div>
                 <div class="digital-products-right-col">
                     <div class="digital-products-right-img-third">
                         <a href="#">
-                            <?php $image = get_field('вigital_products_right_img_third');?>
+                            <?php $image = get_field('digital_products_right_img_third');?>
                             <img src="<?php echo $image['url'];?>">
                         </a>
                     </div>
@@ -211,14 +211,14 @@
                     </span>
                     <div class="digital-products-right-third-title">
                         <h5>
-                            <?php echo get_field('вigital_products_right_third_title')?>
+                            <?php echo get_field('digital_products_right_third_title')?>
                         </h5>
                     </div>
                 </div>
                 <div class="digital-products-right-col">
                     <div class="digital-products-right-img-fourth">
                         <a href="#">
-                            <?php $image = get_field('вigital_products_right_img_fourth');?>
+                            <?php $image = get_field('digital_products_right_img_fourth');?>
                             <img src="<?php echo $image['url'];?>">
                         </a>
                     </div>
@@ -227,7 +227,7 @@
                     </span>
                     <div class="digital-products-right-fourth-title">
                         <h5>
-                            <?php echo get_field('вigital_products_right_fourth_title')?>
+                            <?php echo get_field('digital_products_right_fourth_title')?>
                         </h5>
                     </div>
                 </div>
