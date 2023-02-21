@@ -295,4 +295,19 @@ h5 {
   max-width: 146px;
   padding: 0 6px; }
 
+.partners {
+  background-color: rgba(112, 111, 229, 0.02);
+  padding: 60px 0 100px;
+  margin-top: 186px; }
+  .partners-title {
+    text-align: center;
+    padding-bottom: 25px; }
+    .partners-title h4 {
+      line-height: 24px; }
+  .partners-images {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    padding-top: 25px; }
+
 /*# sourceMappingURL=main.css.map */

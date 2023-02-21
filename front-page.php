@@ -1,6 +1,4 @@
 <?php get_header();?>
-
-
 <section class=" section hero">
     <div class="container">
         <div class="hero-global">
@@ -93,6 +91,47 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section partners">
+    <div class="container">
+        <div class="partners-title">
+            <h4>
+                <?php echo get_field('partners_title')?>
+            </h4>
+        </div>
+        <div class="partners-images">
+            <div class="partners-img">
+                <a href="#">
+                    <?php $image = get_field('partners_google');?>
+                    <img src="<?php echo $image['url'];?>">
+                </a>
+            </div>
+            <div class="partners-img">
+                <a href="#">
+                    <?php $image = get_field('partners_airbnb');?>
+                    <img src="<?php echo $image['url'];?>">
+                </a>
+            </div>
+            <div class="partners-img">
+                <a href="#">
+                    <?php $image = get_field('partners_creative');?>
+                    <img src="<?php echo $image['url'];?>">
+                </a>
+            </div>
+            <div class="partners-img">
+                <a href="#">
+                    <?php $image = get_field('partners_shopify');?>
+                    <img src="<?php echo $image['url'];?>">
+                </a>
+            </div>
+            <div class="partners-img">
+                <a href="#">
+                    <?php $image = get_field('partners_amazon');?>
+                    <img src="<?php echo $image['url'];?>">
+                </a>
             </div>
         </div>
     </div>
