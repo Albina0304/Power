@@ -116,7 +116,7 @@
                 z-index: 2;
                 right: -17px;
                 top: -17px;
-                background-color: $background;
+                background-color: $white;
             }
             &::before {
                 content: '';
@@ -128,7 +128,7 @@
                 z-index: 2;
                 left: -17px;
                 top: -17px;
-                background-color: $background;
+                background-color: $white;
             }
         }
     }
@@ -145,7 +145,7 @@
             z-index: 2;
             right: -9px;
             bottom: -25px;
-            background-color: $background;
+            background-color: $white;
         }
         &::before {
             content: '';
@@ -157,7 +157,7 @@
             z-index: 2;
             bottom: -25px;
             left: -364px;
-            background-color: $background;
+            background-color: $white;
         }
     }
     &-colon-left {

@@ -26,3 +26,4 @@ function my_scripts() {
 add_action('wp_enqueue_scripts', 'my_scripts');
 add_image_size( 'custom-size', 263, 188 );
 add_image_size( 'primary', 263, 188 );
+add_image_size( 'sm-img', 80, 80 );

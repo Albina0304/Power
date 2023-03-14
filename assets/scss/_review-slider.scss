@@ -6,6 +6,8 @@
         text-align: center;
         position: relative;
         padding: 94px 0 75px;
+        max-width: 360px;
+        margin: 0 auto;
         & h2 {
           font-family: Poppins;
           font-weight: 800;
@@ -53,7 +55,6 @@
             color: $color-title;
         }
     }
-    
     & .review-comment {
         outline: none;
         text-align: center;
@@ -62,26 +63,31 @@
             color: $color-slide;
             line-height: 24px;
         }
+        &.slick-slide {
+            font-family: Poppins;
+            font-size: $base-size;
+            line-height: 24px;
+            &.slick-current.slick-active p {
+                font-family: Poppins;
+                font-size: $base-size;
+                line-height: 44px;
+            }
+        }
     }
-    
     & .grid-padding-x > .cell:nth-child(2) {
         position: relative;
-    }
-    
-    & .grid-padding-x > .cell:nth-child(2) .quotes {
-        position: absolute;
-        width: 100%;
-    }
-    & .grid-padding-x > .cell:nth-child(2) .quotes::before {
-        top: -30px;
-        left: -70px;
-    }
-      
-    & .grid-padding-x > .cell:nth-child(2) .quotes::after {
-        bottom: -20px;
-        right: -70px;
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
+        & .quotes {
+            position: absolute;
+            width: 100%;
+            &::before {
+                top: -30px;
+                left: -70px;
+            }
+            &::after {
+                bottom: -20px;
+                right: -70px;
+            }
+        }
     }
     .grid-padding-x > .cell:nth-child(2) .quotes::after,
     .grid-padding-x > .cell:nth-child(2) .quotes::before {
@@ -92,20 +98,16 @@
         transform: rotate(180deg);
         display: block;
         z-index: 999;
-        font-size: 100px;
+        font-size: $big-size;
         font-weight: 800;
         line-height: 122px;
+    }
+    .grid-padding-x > .cell:nth-child(2) .quotes::after {
+        transform: rotate(0deg);
     }
     .grid-x.grid-padding-x.align-center {
         max-width: 670px;
         margin: 0 auto;
-    }
-    .review-comment.slick-slide.slick-current.slick-active p {
-        font-family: Poppins;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 44px;
-
     }
     .review-img.slick-slide.slick-current.slick-active.slick-center img {
         border: 5px solid $primary-color;
@@ -120,11 +122,11 @@
         }
         & span {
             font-family: Poppins;
-            font-size: 20px;
+            font-size: $text-size;
             font-weight: 500;
             line-height: 30px;
             text-align: center;
-
+            padding-bottom: 87px;
         }
     }
     .review-img.slick-slide.slick-current.slick-active.slick-center .review-card-info {

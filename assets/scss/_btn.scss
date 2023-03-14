@@ -5,7 +5,7 @@
 	font-size: 16px;
 	line-height: 28px;
 	font-weight: 500;
-	color: $background;
+	color: $white;
 	text-align: center;
 	transition: background-color 0.5s steps(4, jump-end),color 0.5s cubic-bezier(0.1, 0.7, 1, 0.1);
 	&-secondary {
@@ -15,7 +15,7 @@
         line-height: 27px;
         padding: 10px 40px;
         &:hover {
-		background-color: $background;
+		background-color: $white;
 		color: $primary-color;
         border: 2px solid $primary-color;
 	    }

@@ -346,7 +346,9 @@ h5 {
     text-transform: uppercase;
     text-align: center;
     position: relative;
-    padding: 94px 0 75px; }
+    padding: 94px 0 75px;
+    max-width: 360px;
+    margin: 0 auto; }
     .reviews .section-title h2 {
       font-family: Poppins;
       font-weight: 800;
@@ -387,19 +389,25 @@ h5 {
     .reviews .review-comment p {
       color: #03014C;
       line-height: 24px; }
+    .reviews .review-comment.slick-slide {
+      font-family: Poppins;
+      font-size: 16px;
+      line-height: 24px; }
+      .reviews .review-comment.slick-slide.slick-current.slick-active p {
+        font-family: Poppins;
+        font-size: 16px;
+        line-height: 44px; }
   .reviews .grid-padding-x > .cell:nth-child(2) {
     position: relative; }
-  .reviews .grid-padding-x > .cell:nth-child(2) .quotes {
-    position: absolute;
-    width: 100%; }
-  .reviews .grid-padding-x > .cell:nth-child(2) .quotes::before {
-    top: -30px;
-    left: -70px; }
-  .reviews .grid-padding-x > .cell:nth-child(2) .quotes::after {
-    bottom: -20px;
-    right: -70px;
-    -webkit-transform: rotate(0);
-    transform: rotate(0); }
+    .reviews .grid-padding-x > .cell:nth-child(2) .quotes {
+      position: absolute;
+      width: 100%; }
+      .reviews .grid-padding-x > .cell:nth-child(2) .quotes::before {
+        top: -30px;
+        left: -70px; }
+      .reviews .grid-padding-x > .cell:nth-child(2) .quotes::after {
+        bottom: -20px;
+        right: -70px; }
   .reviews .grid-padding-x > .cell:nth-child(2) .quotes::after,
   .reviews .grid-padding-x > .cell:nth-child(2) .quotes::before {
     content: ',,';
@@ -412,14 +420,11 @@ h5 {
     font-size: 100px;
     font-weight: 800;
     line-height: 122px; }
+  .reviews .grid-padding-x > .cell:nth-child(2) .quotes::after {
+    transform: rotate(0deg); }
   .reviews .grid-x.grid-padding-x.align-center {
     max-width: 670px;
     margin: 0 auto; }
-  .reviews .review-comment.slick-slide.slick-current.slick-active p {
-    font-family: Poppins;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 44px; }
   .reviews .review-img.slick-slide.slick-current.slick-active.slick-center img {
     border: 5px solid #706FE5;
     padding: 3px; }
@@ -434,7 +439,8 @@ h5 {
       font-size: 20px;
       font-weight: 500;
       line-height: 30px;
-      text-align: center; }
+      text-align: center;
+      padding-bottom: 87px; }
   .reviews .review-img.slick-slide.slick-current.slick-active.slick-center .review-card-info {
     min-width: 210px;
     display: flex;
