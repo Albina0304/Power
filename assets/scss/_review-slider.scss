@@ -1,6 +1,8 @@
 .reviews {
     background-color: $secondary-color;
     color: $color-slide;
+    position: relative;
+    z-index: 1;
     & .section-title {
         text-transform: uppercase;
         text-align: center;
@@ -140,5 +142,19 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    & .reviews-decor {
+        &-top {
+            position: absolute;
+            z-index: 1;
+            top: 72px;
+            left: 320px;
+        }
+        &-bottom {
+            position: absolute;
+            z-index: 1;
+            bottom: 120px;
+            right: 300px;
+        }
     }
 }

@@ -341,7 +341,9 @@ h5 {
 
 .reviews {
   background-color: rgba(112, 111, 229, 0.02);
-  color: #03014C; }
+  color: #03014C;
+  position: relative;
+  z-index: 1; }
   .reviews .section-title {
     text-transform: uppercase;
     text-align: center;
@@ -451,5 +453,15 @@ h5 {
     display: flex;
     flex-direction: column;
     align-items: center; }
+  .reviews .reviews-decor-top {
+    position: absolute;
+    z-index: 1;
+    top: 72px;
+    left: 320px; }
+  .reviews .reviews-decor-bottom {
+    position: absolute;
+    z-index: 1;
+    bottom: 120px;
+    right: 300px; }
 
 /*# sourceMappingURL=main.css.map */

@@ -177,6 +177,9 @@
 <?php $review_repeat_images = get_field('review_repeat_images');?>
 <section class=" section reviews">
     <div class="container">
+        <div class="reviews-decor-top">
+            <img src="wp-content/themes/power/assets/images/bg.png">
+        </div>
         <div class="section-title">
             <h2>
                 <?php echo get_field('reviews_title')?>
@@ -215,6 +218,9 @@
                     <?php endforeach;?>
                 </div>
             </div>
+        </div>
+        <div class="reviews-decor-bottom">
+            <img src="wp-content/themes/power/assets/images/bg.png">
         </div>
     </div>
 </section>
