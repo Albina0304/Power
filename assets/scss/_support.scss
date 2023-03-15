@@ -1,0 +1,67 @@
+.support {
+    &-global {
+        display: flex;
+    }
+    &-form {
+        background-color: $color-form;
+        border-radius: 12px;
+        width: 470px;
+        &-img {
+            position: absolute;
+            z-index: 1;
+            padding: 25px 11px 23px 22px;
+        }
+        &-button {
+            position: absolute;
+            right: -10px;
+            top: 210px;
+            box-shadow: 0px 6px 20px rgba(112, 111, 229, 0.5);
+        }
+    }
+    &-col {
+        max-width: 50%;
+        padding: 0 35px;
+        &-img {
+            margin-bottom: 12px;
+        }
+        &-title {
+            margin-bottom: 10px;
+        }
+        &-text {
+            margin-bottom: 62px;
+        }
+    }
+    &-colons {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        margin: 0 -35px;
+    }
+    &-right {
+        margin-left: 94px;
+    }
+    &-left {
+        max-width: 40%;
+        position: relative;
+        z-index: 1;
+        &-title {
+            margin-bottom: 24px;
+        }
+        &-text {
+            margin-bottom: 50px;
+            font-size: 20px;
+            line-height: 36px;
+        }
+    }
+    & input {
+        background-color: transparent;
+        padding: 24px 182px 24px 57px;
+        border: none;
+    }
+    form {
+        display: flex;
+    }
+    & .btn-secondary:hover {
+        background-color: transparent;
+    }
+}

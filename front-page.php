@@ -224,4 +224,66 @@
         </div>
     </div>
 </section>
+<section class=" section support">
+    <div class="container">
+        <div class="support-global">
+            <div class="support-left">
+                <div class="support-left-title">
+                    <h2>
+                        <?php echo get_field('support_left_title')?>
+                    </h2>
+                </div>
+                <div class="support-left-text">
+                    <?php echo get_field('support_left_text')?>
+                </div>
+                <?php $form_img = get_field('support_form_img');?>
+                <div class="support-form">
+                    <div class="support-form-img">
+                        <a href="#">
+                            <img src="<?php echo $form_img['url'];?>">
+                        </a>
+                    </div>
+                    <form action="">
+                        <div class="support-button">
+                            <input name="name" type="text" placeholder="Enter your email address">
+                        </div>
+                        <div class="support-form-button">
+                        <?php 
+                            $link = get_field('support_form_button');
+                            if( $link ): 
+                                $link_url = $link['url'];
+                                $link_title = $link['title'];
+                                $link_target = $link['target'] ? $link['target'] : '_self';?>
+                            <a class="btn btn-secondary" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                        <?php endif; ?>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="support-right">
+                <div class="support-colons">
+                    <?php 
+                    $supcols = (get_field('support_col'));
+                    foreach($supcols as $supcol):?>
+                    <div class="support-col">
+                        <div class="support-col-img">
+                            <?php echo wp_get_attachment_image($supcol['support_col_img']['id'], 'sm-img');?>
+                        </div>
+                        <div class="support-col-title">
+                            <h4>
+                                <?php echo $supcols[0]['support_col_title'];?>
+                            </h4>
+                        </div>
+                        <div class="support-col-text">
+                            <p>
+                                <?php echo $supcols[0]['support_col_text'];?>
+                            </p>
+                        </div>
+                    </div>
+                    <?php endforeach;?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <?php get_footer();?>
