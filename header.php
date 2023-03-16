@@ -33,18 +33,6 @@
                                 'menu_class' => 'header-navigation'
                             );
                             wp_nav_menu($menu_args);?>
-                                <!-- <li>
-                                    <a href="#">Home</a>
-                                </li>
-                                <li>
-                                    <a href="#">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="#">Services</a>
-                                </li>
-                                <li>
-                                    <a href="#">Products</a>
-                                </li> -->
                             </ul>
                         </div>
                     </div>

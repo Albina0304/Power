@@ -267,7 +267,9 @@
                     foreach($supcols as $supcol):?>
                     <div class="support-col">
                         <div class="support-col-img">
-                            <?php echo wp_get_attachment_image($supcol['support_col_img']['id'], 'sm-img');?>
+                            <a href="#">
+                                <?php echo wp_get_attachment_image($supcol['support_col_img']['id'], 'sm-img');?>
+                            </a>
                         </div>
                         <div class="support-col-title">
                             <h4>

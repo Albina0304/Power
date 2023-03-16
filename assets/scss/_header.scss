@@ -33,4 +33,7 @@
         display: flex;
         padding-left: 0;
     }
+    svg path:hover {
+        fill: $primary-color; 
+    }
 }
