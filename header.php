@@ -15,6 +15,13 @@
         <div class="wrapper">
             <header class="header">
                 <div class="container">
+                    <div class="header-burger">
+                        <div id="nav-icon1">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
                     <div class="header-global">
                         <div class="header-logo">
                             <a href="#" class="brand">
@@ -27,12 +34,16 @@
                         </div>
                         <div class="header-navbar">
                             <ul class="header-wrapper header-nav">
-                            <?php
-                            $menu_args = array(
-                                'theme_location' => 'header_menu',
-                                'menu_class' => 'header-navigation'
-                            );
-                            wp_nav_menu($menu_args);?>
+                                <li class="active">
+                                    <a href="#">
+                                        <?php
+                                        $menu_args = array(
+                                        'theme_location' => 'header_menu',
+                                        'menu_class' => 'header-navigation'
+                                        );
+                                        wp_nav_menu($menu_args);?>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>

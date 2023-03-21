@@ -30,7 +30,7 @@
                     </h5>
                     <div class="footer-bottom-navigation">
                         <div class="footer-bottom-nav">
-                            <ul class="header-wrapper header-nav">
+                            <ul class="footer-wrapper footer-nav">
                                 <?php
                                 $menu_args = array(
                                     'theme_location' => 'footer_menu',
