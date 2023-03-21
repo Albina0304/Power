@@ -119,13 +119,15 @@
 ?>
 <section class=" section digital-products">
     <div class="container">
-        <div class="digital-products-title">
-            <h2>
-                <?php echo get_field('digital_products_title')?>
-            </h2>
-        </div>
-        <div class="digital-products-text">
-            <?php echo get_field('digital_products_text')?>
+        <div class="digital-products-description">
+            <div class="digital-products-title">
+                <h2>
+                    <?php echo get_field('digital_products_title')?>
+                </h2>
+            </div>
+            <div class="digital-products-text">
+                <?php echo get_field('digital_products_text')?>
+            </div>
         </div>
         <div class="digital-products-global">
             <div class="digital-products-left">
