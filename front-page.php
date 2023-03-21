@@ -179,50 +179,52 @@
 <?php $review_repeat_images = get_field('review_repeat_images');?>
 <section class=" section reviews">
     <div class="container">
-        <div class="reviews-decor-top">
-            <img src="wp-content/themes/power/assets/images/bg.png">
-        </div>
-        <div class="section-title">
-            <h2>
-                <?php echo get_field('reviews_title')?>
-            </h2>
-        </div>
-        <div class="grid-x grid-padding-x align-center">
-            <div class="cell medium-9 small-12"></div>
-            <div class="cell medium-10 small-12">
-                <div class="quotes"></div>
-                <div class="reviews-text-slider slider-for">
-                <?php 
-                $revcoms = (get_field('review_comment'));
-                foreach($revcoms as $revcom):?>
-                    <div class="review-comment">
-                        <?php echo $revcom['comment'];?> 
-                    </div>
-                <?php endforeach;?>
-                </div>
+        <div class="reviews-global">
+            <div class="reviews-decor-top">
+                <img src="wp-content/themes/power/assets/images/bg.png">
             </div>
-            <div class="cell medium-9 small-12">
-                <div class="reviews-slider slider-nav">
-                <?php 
-                $repeat_images = (get_field('review_repeat_image'));
-                foreach($repeat_images as $repeat_img):?>
-                    <div class="review-img">
-                        <?php echo wp_get_attachment_image($repeat_img['review_repeat_img']['id'], 'sm-img');?>
-                        <div class="review-card-info">
-                            <h3>
-                                <?php echo $repeat_img['review_repeat_title']; ?>
-                            </h3>
-                            <span>
-                                <?php echo $repeat_img['review_repeat_text']; ?>
-                            </span>
+            <div class="section-title">
+                <h2>
+                    <?php echo get_field('reviews_title')?>
+                </h2>
+            </div>
+            <div class="grid-x grid-padding-x align-center">
+                <div class="cell medium-9 small-12"></div>
+                <div class="cell medium-10 small-12">
+                    <div class="quotes"></div>
+                    <div class="reviews-text-slider slider-for">
+                    <?php 
+                    $revcoms = (get_field('review_comment'));
+                    foreach($revcoms as $revcom):?>
+                        <div class="review-comment">
+                            <?php echo $revcom['comment'];?> 
                         </div>
-                    </div>
                     <?php endforeach;?>
+                    </div>
+                </div>
+                <div class="cell medium-9 small-12">
+                    <div class="reviews-slider slider-nav">
+                    <?php 
+                    $repeat_images = (get_field('review_repeat_image'));
+                    foreach($repeat_images as $repeat_img):?>
+                        <div class="review-img">
+                            <?php echo wp_get_attachment_image($repeat_img['review_repeat_img']['id'], 'sm-img');?>
+                            <div class="review-card-info">
+                                <h3>
+                                    <?php echo $repeat_img['review_repeat_title']; ?>
+                                </h3>
+                                <span>
+                                    <?php echo $repeat_img['review_repeat_text']; ?>
+                                </span>
+                            </div>
+                        </div>
+                        <?php endforeach;?>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="reviews-decor-bottom">
-            <img src="wp-content/themes/power/assets/images/bg.png">
+            <div class="reviews-decor-bottom">
+                <img src="wp-content/themes/power/assets/images/bg.png">
+            </div>
         </div>
     </div>
 </section>

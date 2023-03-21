@@ -1,7 +1,7 @@
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         </div>
         <?php wp_footer()?>
-        <footer class="footer">
+        <!-- <footer class="footer">
             <div class="container">
                 <div class="footer-top">
                     <div class="footer-top-logo">
@@ -59,6 +59,6 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> -->
     </body>
 </html>
