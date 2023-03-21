@@ -2,6 +2,10 @@
     background-color: $secondary-color;
     padding: 60px 0 100px;
     margin-top: 186px;
+    @include media-down('820px') {
+        margin-top: 0;
+        padding: 60px 0 50px;
+    }
     &-title {
         text-align: center;
         padding-bottom: 25px;
@@ -14,5 +18,15 @@
         align-items: baseline;
         justify-content: space-around;
         padding-top: 25px;
+        @include media-down('820px') {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0px;
+        }
+    }
+    &-img {
+        @include media-down('820px') {
+            padding: 10px 0;
+        }
     }
 }
