@@ -1,11 +1,17 @@
 .support {
     &-global {
         display: flex;
+        @include media-down('1090px') {
+            flex-direction: column-reverse;
+        }
     }
     &-form {
         background-color: $color-form;
         border-radius: 12px;
         width: 470px;
+        @include media-down('1090px') {
+            width: 100%;
+        }
         &-img {
             position: absolute;
             z-index: 1;
@@ -16,13 +22,27 @@
             right: -10px;
             top: 210px;
             box-shadow: 0px 6px 20px rgba(112, 111, 229, 0.5);
+            @include media-down('1090px') {
+                right: 20px;
+                top: 175px;
+            }
+            @include media-down('763px') {
+                top: 210px;
+            }
         }
     }
     &-col {
         max-width: 50%;
         padding: 0 35px;
+        @include media-down('763px') {
+            padding: 0 10px;
+        }
         &-img {
             margin-bottom: 12px;
+            @include media-down('560px') {
+                display: flex;
+                justify-content: center;
+            }
         }
         &-title {
             margin-bottom: 10px;
@@ -36,14 +56,28 @@
         flex-wrap: wrap;
         overflow: hidden;
         margin: 0 -35px;
+        @include media-down('763px') {
+            margin: 0 -10px;
+            @include media-down('560px') {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
     }
     &-right {
         margin-left: 94px;
+        @include media-down('1090px') {
+            margin: 0;
+        }
     }
     &-left {
         max-width: 40%;
         position: relative;
         z-index: 1;
+        @include media-down('1090px') {
+            max-width: 100%;
+        }
         &-title {
             margin-bottom: 24px;
         }

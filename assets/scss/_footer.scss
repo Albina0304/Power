@@ -21,6 +21,9 @@
             border-radius: 50%;
             background-color: $primary-color;
             margin-left: 16px;
+            @include media-down('520px') {
+                padding: 7px;
+            }
             &:hover {
                 background-color: transparent;
                 cursor: pointer;
@@ -35,6 +38,9 @@
         margin-top: 63px;
     }
     &-bottom {
+        @include media-down('760px') {
+            display: none;
+        }
         &-title {
             color: $white;
             margin: 48px 0 18px;
@@ -42,27 +48,97 @@
         &-copy {
             color: $white;
             text-align: center;
+            @include media-down('760px') {
+                margin-top: 50px;
+            }
         }
         &-nav {
             margin: 0 -40px;
+            @include media-down('1068px') {
+                margin: 0 -20px;
+                @include media-down('860px') {
+                    margin: 0 -10px;
+                }
+            }
         }
         &-navigation {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 76px;
+            @include media-down('860px') {
+                margin-bottom: 36px;
+            }
             ul {
                 display: flex;
                 padding: 0;
                 margin: 0;
                 & li {
                     padding: 0px 40px;
+                    @include media-down('1068px') {
+                        padding: 0 20px;
+                    }
+                    @include media-down('860px') {
+                        padding: 0 10px;
+                    }
                     & a {
                         color: $white;
                         opacity: 0.75;
+                        &:hover {
+                            color: $primary-color;
+                        }
                     }
                 }
             }
+        }
+    }
+    & .accordion {
+        display: none;
+        @include media-down('760px') {
+            display: block;
+            margin: 20px 0;
+        } 
+        &-button {
+            padding: 5px 0;
+            font-size: 14px;
+        }
+        &-body {
+            padding: 10px 0;
+        }
+        & .footer-colon-accordion {
+            width: 100%;
+        }
+        & .footer-bottom-title-accordion {
+            display: flex;
+            justify-content: space-between;
+            color: $white;
+            margin: 48px 0 18px;
+        }
+        & .footer-wrapper.footer-nav {
+            padding: 0;
+        }
+        & #menu-footer {
+            padding: 0;
+        }
+        & #footer-item-1 {
+            & ul li a {
+                color: $primary-color;
+                line-height: 50px;
+                font-size: 20px;
+                box-shadow: 0px 6px 20px rgba(0, 0, 100, 0.3);
+            }
+            & a:hover {
+                color: $white;
+            }
+        }
+        & .footer-plus {
+            transition: transform .3s;
+            & svg path {
+                fill: $white;
+            }
+        }
+        [aria-expanded='true'] .footer-plus {
+            transform: rotate(-180deg);
         }
     }
 }
