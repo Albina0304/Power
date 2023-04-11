@@ -106,7 +106,7 @@
             <div class="partners-img">
                 <a href="#">
                     <?php $image = get_field('partners_google');?>
-                    <img src="<?php echo $img['image']['url'];?>">
+                    <img src="<?php echo $img['partners_google']['url'];?>">
                 </a>
             </div>
         <?php endforeach;
@@ -115,7 +115,7 @@
     </div>
 </section>
 <?php 
- $digital_products = get_field('digital_products');
+ $digital_products = get_field('digital_products_posts');
 ?>
 <section class=" section digital-products">
     <div class="container">
@@ -133,20 +133,21 @@
             <div class="digital-products-left">
                 <div class="digital-products-left-image">
                     <a href="#">
-                        <img src="<?php echo $digital_products[0]['image']['url'];?>">
+                        <?php print_r(get_the_post_thumbnail($digital_products[0]))?>
                     </a>
                 </div>
                 <span class="digital-products-app">
-                    App Design - 
-                    <?php echo $digital_products[0]['date'];?>
+                    <?php print_r(get_field('post_date', $digital_products[0]->ID))?>
                 </span>
                 <div class="digital-products-left-title">
                     <h3>
-                        <?php echo $digital_products[0]['title'];?>
+                        <a href="<?php echo get_permalink($digital_products[0]->ID)?>">
+                            <?php echo $digital_products[0]->post_title;?>
+                        </a>
                     </h3>
                 </div>
                 <div class="digital-products-left-text">
-                    <?php echo $digital_products[0]['description'];?>
+                    <?php print_r($digital_products[0]->post_content);?>
                 </div>
             </div>
             <div class="digital-products-right">
@@ -155,19 +156,16 @@
                 foreach($digital_products as $digital_product) :?>
                     <div class="digital-products-right-col">
                         <div class="digital-products-right-img">
-                            <a href="#">
-                                <?php 
-                                echo wp_get_attachment_image($digital_product['image']['id'], 'custom-size');
-                                ?>
-                            </a>
+                            <?php print_r(get_the_post_thumbnail($digital_product))?>
                         </div>
                         <span class="digital-products-app">
-                            App Design - 
-                            <?php echo $digital_product['date']; ?>
+                            <?php print_r(get_field('post_date',$digital_product->ID));?>
                         </span>
                         <div class="digital-products-right-title">
                             <h5>
-                                <?php echo $digital_product['title']; ?>
+                                <a href="<?php echo get_permalink($digital_product->ID)?>">
+                                    <?php echo $digital_product->post_title ?> 
+                                </a>
                             </h5>
                         </div>
                     </div>
@@ -181,7 +179,7 @@
     <div class="container">
         <div class="reviews-global">
             <div class="reviews-decor-top">
-                <img src="wp-content/themes/power/assets/images/bg.png">
+                <img src="<?php echo get_template_directory_uri().'/assets/images/bg.png';?>">
             </div>
             <div class="section-title">
                 <h2>
@@ -208,7 +206,9 @@
                     $repeat_images = (get_field('review_repeat_image'));
                     foreach($repeat_images as $repeat_img):?>
                         <div class="review-img">
-                            <?php echo wp_get_attachment_image($repeat_img['review_repeat_img']['id'], 'sm-img');?>
+                            <div class="review-image">
+                                <?php echo wp_get_attachment_image($repeat_img['review_repeat_img']['id'], 'sm-img');?>
+                            </div>
                             <div class="review-card-info">
                                 <h3>
                                     <?php echo $repeat_img['review_repeat_title']; ?>
@@ -223,7 +223,7 @@
                 </div>
             </div>
             <div class="reviews-decor-bottom">
-                <img src="wp-content/themes/power/assets/images/bg.png">
+                <img src="<?php echo get_template_directory_uri().'/assets/images/bg.png';?>">
             </div>
         </div>
     </div>
@@ -242,12 +242,10 @@
                 </div>
                 <?php $form_img = get_field('support_form_img');?>
                 <div class="support-form">
-                    <div class="support-form-img">
-                        <a href="#">
-                            <img src="<?php echo $form_img['url'];?>">
-                        </a>
-                    </div>
                     <form action="">
+                    <div class="support-form-img">
+                        <img src="<?php echo $form_img['url'];?>">
+                    </div>
                         <div class="support-button">
                             <input name="name" type="text" placeholder="Enter your email address">
                         </div>

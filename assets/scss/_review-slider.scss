@@ -29,22 +29,32 @@
         z-index: 9;
     }
     & .review-img {
-        & img {
-            -webkit-transform: scale(0.7, 0.7);
-            transform: scale(0.7, 0.7);
-            -webkit-transition: all 1s;
-            transition: all 1s;
+        
+        &:not(.slick-current) {
+            & img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        & .review-image {
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             cursor: pointer;
-            display: block;
             margin: 0 auto;
+            transition: all 1s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         &.slick-current {
-            & img {
-                -webkit-transform: scale(1, 1);
-                transform: scale(1, 1);
-                -webkit-transition: all 1s;
-                transition: all 1s;
+            & .review-image {
+                border: 5px solid $primary-color;
+                padding: 3px;
+                & img {
+                    width: 100%;
+                    height: auto;
+                }
             }
         }
     }
@@ -142,10 +152,6 @@
         @include media-down('630px') {
             max-width: 400px;
         }
-    }
-    .review-img.slick-slide.slick-current.slick-active.slick-center img {
-        border: 5px solid $primary-color;
-        padding: 3px;
     }
     .review-card-info {
         display: none;
