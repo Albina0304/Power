@@ -13,18 +13,18 @@ jQuery(document).ready(function ($) {
         prevArrow: '<span class="icon-angle-left"></span>',
         nextArrow: '<span class="icon-angle-right"></span>'
     });
-    $('.slider-for').slick({
+    $('.reviews-text-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
         draggable: false,
         fade: true,
-        asNavFor: '.slider-nav'
+        asNavFor: '.reviews-slider'
     });
-    $('.slider-nav').slick({
+    $('.reviews-slider').slick({
         slidesToShow: 5,
         slidesToScroll: 1,
-        asNavFor: '.slider-for',
+        asNavFor: '.reviews-text-slider',
         dots: false,
         arrows: true,
         centerMode: true,

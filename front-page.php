@@ -1,50 +1,56 @@
 <?php get_header();?>
 <section class=" section hero">
     <div class="container">
+        <?php $hero = get_field('hero') ;?>
         <div class="hero-global">
             <div class="hero-colon-left">
                 <div class="hero-title">
                     <h1>
-                        <?php echo get_field('hero_title')?>
+                        <?php echo $hero['title']?>
                         <span class="hero-products">
                             <?php 
-                                $link = get_field('hero_products_link');
-                                if( $link ): 
-                                    $link_url = $link['url'];
-                                    $link_title = $link['title'];
-                                    $link_target = $link['target'] ? $link['target'] : '_self';?>
-                            <a class="hero-products-link" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                            $link = get_field('hero_products_link');
+                            if( $link ): 
+                                $link_url = $link['url'];
+                                $link_title = $link['title'];
+                                $link_target = $link['target'] ? $link['target'] : '_self';?>
+                                <a class="hero-products-link" href="<?php echo esc_url( $link_url ); ?>" target="blank" target="<?php echo esc_attr( $link_target ); ?>">
+                                    <?php echo esc_html( $link_title ); ?>
+                                </a>
                             <?php endif; ?>
                         </span>
                         <span class="hero-background"></span>
                     </h1> 
                 </div>
                 <div class="hero-text">
-                    <?php echo get_field('hero_text')?>
+                    <?php echo $hero['text']?>
                 </div>
                 <div class="section-button-wrapper">
                     <div class="section-button">
                         <?php 
-                            $link = get_field('hero_btn_secondary');
-                            if( $link ): 
-                                $link_url = $link['url'];
-                                $link_title = $link['title'];
-                                $link_target = $link['target'] ? $link['target'] : '_self';?>
-                        <a class="btn btn-secondary" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                        $link = get_field('hero_btn_secondary');
+                        if( $link ): 
+                            $link_url = $link['url'];
+                            $link_title = $link['title'];
+                            $link_target = $link['target'] ? $link['target'] : '_self';?>
+                            <a class="btn btn-secondary" href="<?php echo esc_url( $link_url ); ?>" target="blank" target="<?php echo esc_attr( $link_target ); ?>">
+                                <?php echo esc_html( $link_title ); ?>
+                            </a>
                         <?php endif; ?>
                     </div>
                     <div class="section-button">
-                    <a class="btn-video" data-bs-toggle="modal" data-bs-target="#hero-modal" href="#">
-                        <?php $image = get_field('hero_btn_modal');?>
-                        <img src="<?php echo $image['url'];?>">
-                    </a>
-                    <?php 
+                        <a class="btn-video" data-bs-toggle="modal" data-bs-target="#hero-modal" href="#">
+                            <img src="<?php echo get_template_directory_uri().'/assets/images/Button.png';?>">
+                        </a>
+                        <?php 
                         $link = get_field('btn_video');
                         if( $link ): 
                             $link_url = $link['url'];
                             $link_title = $link['title'];
                             $link_target = $link['target'] ? $link['target'] : '_self';?>
-                        <a class="btn-video" data-bs-toggle="modal" data-bs-target="#hero-modal" href="<?php echo esc_url( $link_url ); ?>"target="<?php echo esc_attr( $link_target );?>"><?php echo esc_html( $link_title );?></a>
+                            <a class="btn-video" data-bs-toggle="modal" data-bs-target="#hero-modal" href="<?php echo esc_url( $link_url ); ?>"target="<?php echo esc_attr( $link_target );?>">
+                                <?php echo esc_html( $link_title );?>
+                            </a>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -52,29 +58,24 @@
             <div class="hero-colon-right">
                 <div class="hero-colon-right-images">
                     <div class="hero-img-bg">
-                    <?php $image = get_field('hero_image_bg');?>
-                    <img src="<?php echo $image['url'];?>">
+                        <img src="<?php echo get_template_directory_uri().'/assets/images/background-girl.png';?>"> 
                     </div>
                     <div class="hero-img-global">
-                        <?php $image = get_field('hero_image');?>
-                        <img src="<?php echo $image['url'];?>">
+                        
+                        <?php echo wp_get_attachment_image($hero['image'] ['ID'], 'main-size') ?>
                     </div>
                     <div class="hero-img-first">
-                        <?php $image = get_field('hero_img_first');?>
-                        <img src="<?php echo $image['url'];?>">
+                        <img src="<?php echo get_template_directory_uri().'/assets/images/xd.png';?>">
                     </div>
                     <div class="hero-img-second">
-                        <?php $image = get_field('hero_img_second');?>
-                        <img src="<?php echo $image['url'];?>">
+                        <img src="<?php echo get_template_directory_uri().'/assets/images/figma.png';?>">
                     </div>
                     <div class="hero-img-last">
-                        <?php $image = get_field('hero_img_last');?>
-                        <img src="<?php echo $image['url'];?>">
+                        <img src="<?php echo get_template_directory_uri().'/assets/images/diamond.png';?>">
                     </div>
                     <div class="hero-img-local">
                         <a href="#">
-                            <?php $image = get_field('hero_img_local');?>
-                            <img src="<?php echo $image['url'];?>">
+                            <img src="<?php echo get_template_directory_uri().'/assets/images/local.png';?>">
                         </a>
                     </div>
                 </div>
@@ -92,6 +93,7 @@
         </div>
     </div>
 </section>
+<?php $comrep = get_field('companies_repeater'); ?>
 <section class="section partners">
     <div class="container">
         <div class="partners-title">
@@ -101,22 +103,19 @@
         </div>
         <div class="partners-images">
         <?php 
-        $imgs = get_field('test_repeater');
-        foreach($imgs as $img) :?>
-            <div class="partners-img">
-                <a href="#">
-                    <?php $image = get_field('partners_google');?>
-                    <img src="<?php echo $img['partners_google']['url'];?>">
-                </a>
-            </div>
-        <?php endforeach;
-        ?>
+            foreach($comrep as $img) :
+                if($img['partners']): ?>
+                    <div class="partners-img">
+                        <a href="<?php echo $img['partners_link']['url'] ?>" target="blank">
+                            <?php echo wp_get_attachment_image($img['partners']['ID']); ?>
+                        </a>
+                    </div>
+                <?php endif;?>
+            <?php endforeach;?>
         </div>
     </div>
 </section>
-<?php 
- $digital_products = get_field('digital_products_posts');
-?>
+<?php $digital_products = get_field('digital_products_posts');?>
 <section class=" section digital-products">
     <div class="container">
         <div class="digital-products-description">
@@ -131,42 +130,58 @@
         </div>
         <div class="digital-products-global">
             <div class="digital-products-left">
-                <div class="digital-products-left-image">
-                    <a href="#">
-                        <?php print_r(get_the_post_thumbnail($digital_products[0]))?>
-                    </a>
-                </div>
+                <?php if (($digital_products[0])):?>
+                    <div class="digital-products-left-image">
+                        <a href="<?php echo get_permalink($digital_products[0])?>">
+                            <?php echo get_the_post_thumbnail($digital_products[0], 'custom-size')?>
+                        </a>
+                    </div>
+                <?php endif;?>
                 <span class="digital-products-app">
-                    <?php print_r(get_field('post_date', $digital_products[0]->ID))?>
+                    <?php if (($digital_products[0])):?>
+                        <?php echo get_field('post_date', $digital_products[0])?>
+                    <?php endif;?>
                 </span>
                 <div class="digital-products-left-title">
-                    <h3>
-                        <a href="<?php echo get_permalink($digital_products[0]->ID)?>">
-                            <?php echo $digital_products[0]->post_title;?>
-                        </a>
-                    </h3>
+                    <?php if ($digital_products[0]):?>
+                        <h3>
+                            <a href="<?php echo get_permalink($digital_products[0])?>">
+                                <?php echo $digital_products[0];?>
+                            </a>
+                        </h3>
+                    <?php endif;?>
                 </div>
                 <div class="digital-products-left-text">
-                    <?php print_r($digital_products[0]->post_content);?>
+                    <?php if ($digital_products[0]):?>
+                        <?php echo $digital_products[0];?>
+                    <?php endif;?>
                 </div>
             </div>
             <div class="digital-products-right">
-                <?php 
-                array_shift($digital_products);
+            <?php 
+            array_shift($digital_products);
                 foreach($digital_products as $digital_product) :?>
                     <div class="digital-products-right-col">
-                        <div class="digital-products-right-img">
-                            <?php print_r(get_the_post_thumbnail($digital_product))?>
-                        </div>
+                        <?php if ($digital_product):?>
+                            <div class="digital-products-right-img">
+                                <a href="<?php echo get_permalink($digital_product)?>">
+                                    <?php echo get_the_post_thumbnail($digital_product, 'primary')?>
+                                </a>
+                            </div>
+                        <?php endif;?>
                         <span class="digital-products-app">
-                            <?php print_r(get_field('post_date',$digital_product->ID));?>
+                            <?php if ('post_date'):?>
+                                <?php echo get_field('post_date',$digital_product);?>
+                            <?php endif;?>
                         </span>
                         <div class="digital-products-right-title">
-                            <h5>
-                                <a href="<?php echo get_permalink($digital_product->ID)?>">
-                                    <?php echo $digital_product->post_title ?> 
-                                </a>
-                            </h5>
+                            <?php if ($digital_product):?>
+                                <h5>
+                                    <a href="<?php echo get_permalink($digital_product)?>">
+                                        <?php echo $digital_product ?> 
+                                    </a>
+                                </h5>
+                            <?php endif;?>
                         </div>
                     </div>
                 <?php endforeach;?>
@@ -175,59 +190,71 @@
     </div>
 </section>
 <?php $review_repeat_images = get_field('review_repeat_images');?>
-<section class=" section reviews">
-    <div class="container">
-        <div class="reviews-global">
-            <div class="reviews-decor-top">
-                <img src="<?php echo get_template_directory_uri().'/assets/images/bg.png';?>">
-            </div>
-            <div class="section-title">
-                <h2>
-                    <?php echo get_field('reviews_title')?>
-                </h2>
-            </div>
-            <div class="grid-x grid-padding-x align-center">
-                <div class="cell medium-9 small-12"></div>
-                <div class="cell medium-10 small-12">
-                    <div class="quotes"></div>
-                    <div class="reviews-text-slider slider-for">
-                    <?php 
-                    $revcoms = (get_field('review_comment'));
-                    foreach($revcoms as $revcom):?>
-                        <div class="review-comment">
-                            <?php echo $revcom['comment'];?> 
+    <section class=" section reviews">
+        <div class="container">
+            <div class="reviews-global">
+                <div class="reviews-decor-top">
+                    <img src="<?php echo get_template_directory_uri().'/assets/images/bg.png';?>">
+                </div>
+                <div class="section-title">
+                    <h2>
+                        <?php echo get_field('reviews_title')?>
+                    </h2>
+                </div>
+                <div class="reviews-wrapper">
+                    <div class="cell cell-global"></div>
+                    <div class="cell">
+                        <div class="quotes"></div>
+                        <div class="reviews-text-slider">
+                            <?php 
+                            $revcoms = get_field('review_comment');
+                            if ($revcoms) {
+                                foreach($revcoms as $revcom):?>
+                                    <?php if ($revcom['comment']):?>
+                                        <div class="review-comment">
+                                            <?php echo $revcom['comment'];?> 
+                                        </div>
+                                    <?php endif;?>
+                                <?php endforeach;
+                            } ?>
                         </div>
-                    <?php endforeach;?>
+                    </div>
+                    <div class="cell">
+                        <div class="reviews-slider slider-nav">
+                            <?php 
+                            $repeat_images = get_field('review_repeat_image');
+                            if ($repeat_images) {
+                                foreach($repeat_images as $repeat_img):?>
+                                    <div class="review-img">
+                                        <?php if ($repeat_img['review_repeat_img']):?>
+                                            <div class="review-image">
+                                                <?php echo wp_get_attachment_image($repeat_img['review_repeat_img']['id'], 'sm-img');?>
+                                            </div>
+                                        <?php endif;?>
+                                        <div class="review-card-info">
+                                            <?php if ($repeat_img['review_repeat_title']):?>
+                                                <h3>
+                                                    <?php echo $repeat_img['review_repeat_title']; ?>
+                                                </h3>
+                                            <?php endif;?>
+                                            <?php if ($repeat_img['review_repeat_text']):?>
+                                                <span>
+                                                    <?php echo $repeat_img['review_repeat_text']; ?>
+                                                </span>
+                                            <?php endif;?>
+                                        </div>
+                                    </div>
+                                <?php endforeach;
+                            } ?>
+                        </div>
                     </div>
                 </div>
-                <div class="cell medium-9 small-12">
-                    <div class="reviews-slider slider-nav">
-                    <?php 
-                    $repeat_images = (get_field('review_repeat_image'));
-                    foreach($repeat_images as $repeat_img):?>
-                        <div class="review-img">
-                            <div class="review-image">
-                                <?php echo wp_get_attachment_image($repeat_img['review_repeat_img']['id'], 'sm-img');?>
-                            </div>
-                            <div class="review-card-info">
-                                <h3>
-                                    <?php echo $repeat_img['review_repeat_title']; ?>
-                                </h3>
-                                <span>
-                                    <?php echo $repeat_img['review_repeat_text']; ?>
-                                </span>
-                            </div>
-                        </div>
-                        <?php endforeach;?>
-                    </div>
+                <div class="reviews-decor-bottom">
+                    <img src="<?php echo get_template_directory_uri().'/assets/images/bg.png';?>">
                 </div>
-            </div>
-            <div class="reviews-decor-bottom">
-                <img src="<?php echo get_template_directory_uri().'/assets/images/bg.png';?>">
             </div>
         </div>
-    </div>
-</section>
+    </section>
 <section class=" section support">
     <div class="container">
         <div class="support-global">
@@ -243,21 +270,24 @@
                 <?php $form_img = get_field('support_form_img');?>
                 <div class="support-form">
                     <form action="">
-                    <div class="support-form-img">
-                        <img src="<?php echo $form_img['url'];?>">
-                    </div>
+                        <div class="support-form-img">
+                            <img src="<?php echo $form_img['url'];?>">
+                        </div>
                         <div class="support-button">
                             <input name="name" type="text" placeholder="Enter your email address">
                         </div>
                         <div class="support-form-button">
-                        <?php 
+                            <?php 
                             $link = get_field('support_form_button');
                             if( $link ): 
                                 $link_url = $link['url'];
                                 $link_title = $link['title'];
                                 $link_target = $link['target'] ? $link['target'] : '_self';?>
-                            <a class="btn btn-secondary" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-                        <?php endif; ?>
+                                <a class="btn btn-secondary" href="<?php echo esc_url( $link_url ); ?>" target="
+                                    <?php echo esc_attr( $link_target ); ?>">
+                                    <?php echo esc_html( $link_title ); ?>
+                                </a>
+                            <?php endif; ?>
                         </div>
                     </form>
                 </div>
@@ -265,26 +295,34 @@
             <div class="support-right">
                 <div class="support-colons">
                     <?php 
-                    $supcols = (get_field('support_col'));
-                    foreach($supcols as $supcol):?>
-                    <div class="support-col">
-                        <div class="support-col-img">
-                            <a href="#">
-                                <?php echo wp_get_attachment_image($supcol['support_col_img']['id'], 'sm-img');?>
-                            </a>
-                        </div>
-                        <div class="support-col-title">
-                            <h4>
-                                <?php echo $supcols[0]['support_col_title'];?>
-                            </h4>
-                        </div>
-                        <div class="support-col-text">
-                            <p>
-                                <?php echo $supcols[0]['support_col_text'];?>
-                            </p>
-                        </div>
-                    </div>
-                    <?php endforeach;?>
+                    $supcols = get_field('support_col');
+                    if ($supcols) {
+                        foreach($supcols as $supcol):?>
+                            <div class="support-col">
+                                <?php if ($supcol['support_col_img']):?>
+                                    <div class="support-col-img">
+                                        <a href="#">
+                                            <?php echo wp_get_attachment_image($supcol['support_col_img']['id'], 'sm-img');?>
+                                        </a>
+                                    </div>
+                                <?php endif;?>
+                                <?php if ($supcol['support_col_title']):?>
+                                    <div class="support-col-title">
+                                        <h4>
+                                            <?php echo $supcol['support_col_title'];?>
+                                        </h4>
+                                    </div>
+                                <?php endif;?>
+                                <?php if ($supcol['support_col_text']) :?>
+                                    <div class="support-col-text">
+                                        <p>
+                                            <?php echo $supcol['support_col_text'];?>
+                                        </p>
+                                    </div>
+                                <?php endif;?>
+                            </div>
+                        <?php endforeach;
+                    } ?>
                 </div>
             </div>
         </div>

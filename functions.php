@@ -21,6 +21,7 @@ function my_scripts() {
     wp_enqueue_style ( 'main_css', get_template_directory_uri()."/dist/css/main.css");
 }
 add_action('wp_enqueue_scripts', 'my_scripts');
-add_image_size( 'custom-size', 263, 188 );
 add_image_size( 'primary', 263, 188 );
 add_image_size( 'sm-img', 80, 80 );
+add_image_size( 'custom-size', 596, 448 );
+add_image_size( 'main-size', 517, 517 );
