@@ -25,3 +25,18 @@ add_image_size( 'primary', 263, 188 );
 add_image_size( 'sm-img', 80, 80 );
 add_image_size( 'custom-size', 596, 448 );
 add_image_size( 'main-size', 517, 517 );
+
+add_action( 'init', 'post_type_albina');
+ 
+function post_type_albina() {
+	register_post_type('Albina',
+		array(
+			'label' => 'Albina',
+			'public' => TRUE,
+			'rewrite' => array( 'slug' => 'Albina', 'with_front' => false ), 
+			'has_archive' => false,
+			'public' => true,
+  		)
+  	);
+	flush_rewrite_rules(false);
+}
