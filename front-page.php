@@ -14,7 +14,7 @@
                                 $link_url = $link['url'];
                                 $link_title = $link['title'];
                                 $link_target = $link['target'] ? $link['target'] : '_self';?>
-                                <a class="hero-products-link" href="<?php echo esc_url( $link_url ); ?>" target="blank" target="<?php echo esc_attr( $link_target ); ?>">
+                                <a class="hero-products-link" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
                                     <?php echo esc_html( $link_title ); ?>
                                 </a>
                             <?php endif; ?>
@@ -33,7 +33,7 @@
                             $link_url = $link['url'];
                             $link_title = $link['title'];
                             $link_target = $link['target'] ? $link['target'] : '_self';?>
-                            <a class="btn btn-secondary" href="<?php echo esc_url( $link_url ); ?>" target="blank" target="<?php echo esc_attr( $link_target ); ?>">
+                            <a class="btn btn-secondary" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
                                 <?php echo esc_html( $link_title ); ?>
                             </a>
                         <?php endif; ?>
@@ -142,18 +142,21 @@
                         <?php echo get_field('post_date', $digital_products[0])?>
                     <?php endif;?>
                 </span>
+                <?php $left_title = get_field('digital_products_left_title');?>
                 <div class="digital-products-left-title">
-                    <?php if ($digital_products[0]):?>
+                    <?php if ($left_title):?>
+                        
                         <h3>
-                            <a href="<?php echo get_permalink($digital_products[0])?>">
-                                <?php echo $digital_products[0];?>
+                            <a href="<?php echo get_permalink($left_title)?>">
+                                <?php echo $left_title;?>
                             </a>
                         </h3>
                     <?php endif;?>
                 </div>
+                <?php $left_text = get_field('digital_products_left_text');?>
                 <div class="digital-products-left-text">
-                    <?php if ($digital_products[0]):?>
-                        <?php echo $digital_products[0];?>
+                    <?php if ($left_text):?>
+                        <?php echo $left_text;?>
                     <?php endif;?>
                 </div>
             </div>
@@ -175,10 +178,10 @@
                             <?php endif;?>
                         </span>
                         <div class="digital-products-right-title">
-                            <?php if ($digital_product):?>
+                            <?php if ($digital_product->post_title):?>
                                 <h5>
-                                    <a href="<?php echo get_permalink($digital_product)?>">
-                                        <?php echo $digital_product ?> 
+                                    <a href="<?php echo get_permalink($digital_product->ID)?>">
+                                        <?php echo $digital_product->post_title ?> 
                                     </a>
                                 </h5>
                             <?php endif;?>
