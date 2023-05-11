@@ -1,0 +1,148 @@
+.record {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    form {
+        input {
+            width: 100%;
+        }
+        label a {
+            border-bottom: 1px solid $primary-color;
+            color: $primary-color;
+        }
+        textarea {
+            background-color: $color-form;
+            border: none;
+            border-radius: 10px;
+            width: 100%;
+            padding: 12px 0 0 15px;
+        }
+    }
+    .records-form {
+        width: 400px;
+        input#check {
+            display: none;
+        }
+    }
+    .form-wrapper {
+        margin-bottom: 25px;
+        label {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    }
+    button.btn.btn-secondary {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+
+
+
+
+
+    //   .form-wrapper-checkbox {
+    //     display: flex;
+    //     margin-bottom: 25px;
+    //   }
+    //   .form-wrapper-checkbox:not(:last-child) {
+    //     border-bottom: 1px solid $color-form;
+    //   }
+    //   .checkboxes.checkbox {
+    //     display: inline-block;
+    //     position: relative;
+    //   }
+    //   .checkboxes.checkbox input {
+    //     position: absolute;
+    //     opacity: 0;
+    //     cursor: pointer;
+    //     height: 0;
+    //     width: 0;
+    //   }
+    //   .checkboxes.checkbox input:checked ~ .checkup:after {
+    //     opacity: 1;
+    //     left: 6px;
+    //   }
+    //   .checkboxes.checkbox .checkup {
+    //     position: absolute;
+    //     left: 0;
+    //     height: 20px;
+    //     width: 20px;
+    //     background-color: $color-form;
+    //     border: 1px solid $primary-color;
+    //     cursor: pointer;
+    //   }
+    //   .checkboxes.checkbox input:checked ~ .checkup {
+    //     background-color: $primary-color;
+    //   }
+    //   .checkboxes.checkbox .checkup:after {
+    //     content: "";
+    //     position: absolute;
+    //     left: 0;
+    //     top: -1px;
+    //     width: 7px;
+    //     height: 15px;
+    //     border: 1px solid $white;
+    //     border-width: 0 3px 3px 0;
+    //     transform: rotate(45deg);
+    //     opacity: 0;
+    //     transition: opacity 0.25s, left 0.25s;
+    //   }
+    //   .checkboxes.checkbox .checkbox-info {
+    //     cursor: pointer;
+    //     margin-left: 30px;
+    //   }
+    .form-wrapper-checkbox {
+        display: flex;
+        margin-bottom: 25px;
+        &:not(:last-child) {
+            border-bottom: 1px solid $color-form;
+        }
+        .checkboxes.checkbox {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+                &:checked ~ .checkup {
+                    background-color: $primary-color;
+                    &:after {
+                        opacity: 1;
+                        left: 6px;
+                    }
+                }
+            }
+            .checkup {
+                position: absolute;
+                left: 0;
+                height: 20px;
+                width: 20px;
+                background-color: $color-form;
+                border: 1px solid $primary-color;
+                // cursor: pointer;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: -1px;
+                    width: 7px;
+                    height: 15px;
+                    border: 1px solid $white;
+                    border-width: 0 3px 3px 0;
+                    transform: rotate(45deg);
+                    opacity: 0;
+                    transition: opacity 0.25s, left 0.25s;
+                }
+            }
+            .checkbox-info {
+                // cursor: pointer;
+                margin-left: 30px;
+            }
+        }
+    }
+}

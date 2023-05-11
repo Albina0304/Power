@@ -147,28 +147,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_640f347e4c178",
-            "label": "Reviews Title",
-            "name": "reviews_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_640f3f4f53fa0",
-            "label": "Review Comment",
-            "name": "review_comment",
+            "key": "field_64352446138df",
+            "label": "Companies repeater",
+            "name": "companies_repeater",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -185,49 +166,9 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_640f47da641c5",
-                    "label": "Comment",
-                    "name": "comment",
-                    "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0
-                }
-            ]
-        },
-        {
-            "key": "field_6410427a85bb7",
-            "label": "Review Repeat Image",
-            "name": "review_repeat_image",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "block",
-            "button_label": "",
-            "sub_fields": [
-                {
-                    "key": "field_641042e185bb8",
-                    "label": "Review Repeat img",
-                    "name": "review_repeat_img",
+                    "key": "field_643525c23e0bb",
+                    "label": "Partners",
+                    "name": "partners",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -249,10 +190,10 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_6410431685bb9",
-                    "label": "Review Repeat Title",
-                    "name": "review_repeat_title",
-                    "type": "text",
+                    "key": "field_64390fc9b9af4",
+                    "label": "Partners link",
+                    "name": "partners_link",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -261,38 +202,15 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_6410433d85bba",
-                    "label": "Review Repeat Text",
-                    "name": "review_repeat_text",
-                    "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0
+                    "return_format": "array"
                 }
             ]
         },
         {
-            "key": "field_6410bfe855ce9",
-            "label": "Support Left Title",
-            "name": "support_left_title",
-            "type": "text",
+            "key": "field_64490e6f427f5",
+            "label": "Digital products",
+            "name": "digital_products",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -301,93 +219,12 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_6410c0488d72d",
-            "label": "Support Left Text",
-            "name": "support_left_text",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_6410c199ab02b",
-            "label": "Support Form Button",
-            "name": "support_form_button",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_6411cdf9a4f10",
-            "label": "Support Col",
-            "name": "support_col",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
             "layout": "block",
-            "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_6411ce2bd3ee4",
-                    "label": "Support Col img",
-                    "name": "support_col_img",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                },
-                {
-                    "key": "field_6411ce4cd3ee5",
-                    "label": "Support Col Title",
-                    "name": "support_col_title",
+                    "key": "field_64490ea7427f6",
+                    "label": "Title",
+                    "name": "title",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -404,9 +241,9 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_6411ce5fd3ee6",
-                    "label": "Support Col Text",
-                    "name": "support_col_text",
+                    "key": "field_64490ed3427f8",
+                    "label": "Description",
+                    "name": "description",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -421,14 +258,34 @@
                     "toolbar": "full",
                     "media_upload": 1,
                     "delay": 0
+                },
+                {
+                    "key": "field_64490f0e427f9",
+                    "label": "Posts",
+                    "name": "posts",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": "",
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 1,
+                    "return_format": "object",
+                    "ui": 1
                 }
             ]
         },
         {
-            "key": "field_6411d473ff6ce",
-            "label": "Support Form img",
-            "name": "support_form_img",
-            "type": "image",
+            "key": "field_644a6baeed439",
+            "label": "Reviews Group",
+            "name": "reviews_group",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -437,35 +294,50 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_6412fedee1791",
-            "label": "Footer Bottom Title",
-            "name": "footer_bottom_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_644a83b373543",
+                    "label": "Reviews Title",
+                    "name": "reviews_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_644a82890a923",
+                    "label": "Reviews",
+                    "name": "reviews",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "review_slider"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 1,
+                    "return_format": "object",
+                    "ui": 1
+                }
+            ]
         },
         {
             "key": "field_6412ffa6e7de5",
@@ -528,10 +400,10 @@
             ]
         },
         {
-            "key": "field_64352446138df",
-            "label": "Companies repeater",
-            "name": "companies_repeater",
-            "type": "repeater",
+            "key": "field_6412fedee1791",
+            "label": "Footer Bottom Title",
+            "name": "footer_bottom_title",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -540,16 +412,167 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "",
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_645a4ef5693dd",
+            "label": "Support Group",
+            "name": "support_group",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_643525c23e0bb",
-                    "label": "Partners",
-                    "name": "partners",
+                    "key": "field_645a4f14693de",
+                    "label": "Left title",
+                    "name": "left_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_645a4f2e693df",
+                    "label": "Left Text",
+                    "name": "left_text",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_645a4f3b693e0",
+                    "label": "Form Button",
+                    "name": "form_button",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_645a4f6b693e1",
+                    "label": "Support Colons",
+                    "name": "support_colons",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_645a50aa7f884",
+                            "label": "image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_645a50ba7f885",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_645a50c87f886",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ]
+                },
+                {
+                    "key": "field_645a4f7e693e3",
+                    "label": "Form img",
+                    "name": "form_img",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -569,162 +592,8 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": ""
-                },
-                {
-                    "key": "field_64390fc9b9af4",
-                    "label": "Partners link",
-                    "name": "partners_link",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array"
                 }
             ]
-        },
-        {
-            "key": "field_64425645487e2",
-            "label": "Digital products title",
-            "name": "digital_products_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_644256655bc63",
-            "label": "Digital products text",
-            "name": "digital_products_text",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_6442567cce53a",
-            "label": "Digital products left image",
-            "name": "digital_products_left_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_644256947633e",
-            "label": "Digital products app",
-            "name": "digital_products_app",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_644256a837e45",
-            "label": "Digital products left title",
-            "name": "digital_products_left_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_644256b8fc018",
-            "label": "Digital products left text",
-            "name": "digital_products_left_text",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_644256cffa5bc",
-            "label": "Digital products posts",
-            "name": "digital_products_posts",
-            "type": "post_object",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": "",
-            "taxonomy": "",
-            "allow_null": 0,
-            "multiple": 1,
-            "return_format": "object",
-            "ui": 1
         }
     ],
     "location": [
@@ -745,5 +614,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682416960
+    "modified": 1683646896
 }

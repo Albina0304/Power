@@ -17,12 +17,15 @@ body {
 .wrapper {
     overflow: hidden;
 }
+
 a {
     text-decoration: none;
 }
 img {
+
 	max-width: 100%;
     display: block;
+    height: auto;
 }
 p {
     font-weight: 400;
@@ -74,5 +77,16 @@ h5 {
     margin: 120px 0;
     @include media-down('820px') {
         margin-bottom: 70px;
+    }
+}
+form {
+    input {
+        padding: 12px 0 12px 15px;
+        border: none;
+        background-color: $color-form;
+        border-radius: 10px;
+        // &#check {
+        //     width: 20px;
+        // }
     }
 }
