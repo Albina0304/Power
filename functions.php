@@ -1,4 +1,5 @@
 <?php 
+add_filter( 'wpcf7_autop_or_not', '__return_false' );
 add_theme_support( 'menus' );
 add_theme_support( 'post-thumbnails' );
 if ( ! function_exists( 'power_register_nav_menu' ) ) {

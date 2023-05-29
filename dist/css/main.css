@@ -109,6 +109,104 @@ form input {
   border: none;
   background-color: #F1F1FC;
   border-radius: 10px; }
+form label a {
+  text-decoration: revert;
+  color: #706FE5; }
+  form label a:hover {
+    color: #2624ca; }
+form textarea {
+  background-color: #F1F1FC;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  padding: 12px 0 0 15px; }
+form input:active::placeholder, form input:focus::placeholder,
+form textarea:active::placeholder,
+form textarea:focus::placeholder {
+  font-size: 0; }
+form .checkboxes.checkbox {
+  display: inline-block;
+  position: relative;
+  cursor: pointer; }
+  form .checkboxes.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0; }
+    form .checkboxes.checkbox input:checked ~ .checkup {
+      background-color: #706FE5; }
+      form .checkboxes.checkbox input:checked ~ .checkup:after {
+        opacity: 1;
+        left: 6px; }
+  form .checkboxes.checkbox .checkup {
+    position: absolute;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #F1F1FC;
+    border: 1px solid #706FE5; }
+    form .checkboxes.checkbox .checkup:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -1px;
+      width: 7px;
+      height: 15px;
+      border: 1px solid #FFFFFF;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+      opacity: 0;
+      transition: opacity 0.25s, left 0.25s; }
+  form .checkboxes.checkbox .checkbox-info {
+    margin-left: 30px; }
+form .form-wrapper-checkbox {
+  display: flex;
+  margin-bottom: 25px; }
+  form .form-wrapper-checkbox:not(:last-child) {
+    border-bottom: 1px solid #F1F1FC; }
+  form .form-wrapper-checkbox label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer; }
+    form .form-wrapper-checkbox label input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0; }
+      form .form-wrapper-checkbox label input:checked ~ span:after {
+        opacity: 1;
+        left: 7px;
+        top: 2px; }
+      form .form-wrapper-checkbox label input:checked ~ span::before {
+        background-color: #706FE5; }
+    form .form-wrapper-checkbox label span {
+      margin-left: 30px;
+      display: flex;
+      align-items: center; }
+      form .form-wrapper-checkbox label span::before {
+        content: "";
+        height: 20px;
+        width: 20px;
+        background-color: #F1F1FC;
+        border: 1px solid #706FE5;
+        display: inline-block;
+        position: absolute;
+        left: 0; }
+      form .form-wrapper-checkbox label span:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -1px;
+        width: 7px;
+        height: 15px;
+        border: 3px solid #FFFFFF;
+        border-top-width: 0;
+        border-left-width: 0;
+        transform: rotate(45deg);
+        opacity: 0;
+        transition: opacity 0.25s, left 0.25s; }
 
 .header {
   font-family: 'Inter', sans-serif;
@@ -906,17 +1004,10 @@ form input {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
+  .record .form-title {
+    margin-bottom: 50px; }
   .record form input {
     width: 100%; }
-  .record form label a {
-    border-bottom: 1px solid #706FE5;
-    color: #706FE5; }
-  .record form textarea {
-    background-color: #F1F1FC;
-    border: none;
-    border-radius: 10px;
-    width: 100%;
-    padding: 12px 0 0 15px; }
   .record .records-form {
     width: 400px; }
     .record .records-form input#check {
@@ -929,47 +1020,6 @@ form input {
   .record button.btn.btn-secondary {
     width: 100%;
     border-radius: 10px; }
-  .record .form-wrapper-checkbox {
-    display: flex;
-    margin-bottom: 25px; }
-    .record .form-wrapper-checkbox:not(:last-child) {
-      border-bottom: 1px solid #F1F1FC; }
-    .record .form-wrapper-checkbox .checkboxes.checkbox {
-      display: inline-block;
-      position: relative;
-      cursor: pointer; }
-      .record .form-wrapper-checkbox .checkboxes.checkbox input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0; }
-        .record .form-wrapper-checkbox .checkboxes.checkbox input:checked ~ .checkup {
-          background-color: #706FE5; }
-          .record .form-wrapper-checkbox .checkboxes.checkbox input:checked ~ .checkup:after {
-            opacity: 1;
-            left: 6px; }
-      .record .form-wrapper-checkbox .checkboxes.checkbox .checkup {
-        position: absolute;
-        left: 0;
-        height: 20px;
-        width: 20px;
-        background-color: #F1F1FC;
-        border: 1px solid #706FE5; }
-        .record .form-wrapper-checkbox .checkboxes.checkbox .checkup:after {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: -1px;
-          width: 7px;
-          height: 15px;
-          border: 1px solid #FFFFFF;
-          border-width: 0 3px 3px 0;
-          transform: rotate(45deg);
-          opacity: 0;
-          transition: opacity 0.25s, left 0.25s; }
-      .record .form-wrapper-checkbox .checkboxes.checkbox .checkbox-info {
-        margin-left: 30px; }
 
 .footer {
   background-color: #2E3E5C;
