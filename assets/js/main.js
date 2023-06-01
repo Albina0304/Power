@@ -1,3 +1,5 @@
+//=../../node_modules/bootstrap/dist/js/bootstrap.js
+//=../../node_modules/slick-carousel/slick/slick.js
 jQuery(document).ready(function ($) {
     $(".regular").slick({
         dots: true,
