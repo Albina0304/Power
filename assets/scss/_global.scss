@@ -79,86 +79,44 @@ h5 {
         margin-bottom: 70px;
     }
 }
-form {
-    input {
-        padding: 12px 0 12px 15px;
-        border: none;
-        background-color: $color-form;
-        border-radius: 10px;
-    }
-    label a {
-        text-decoration: revert;
-        color: $primary-color;
-        &:hover {
-            color: darken($color: $primary-color, $amount: 20%);
+.records-form {
+    form {
+        select {
+            display: block;
+            cursor: pointer;
         }
-    }
-    textarea {
-        background-color: $color-form;
-        border: none;
-        border-radius: 10px;
-        width: 100%;
-        padding: 12px 0 0 15px;
-    }
-    input,
-    textarea {
-        &:active,
-        &:focus {
-            &::placeholder {
-                font-size: 0;
+        input,
+        select {
+            width: 100%;
+            padding: 12px 0 12px 15px;
+            border: none;
+            background-color: $color-form;
+            border-radius: 10px;
+        }
+        label a {
+            text-decoration: revert;
+            color: $primary-color;
+            &:hover {
+                color: darken($color: $primary-color, $amount: 20%);
             }
         }
-    }
-    .checkboxes.checkbox {
-        display: inline-block;
-        position: relative;
-        cursor: pointer;
-        input {
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
-            height: 0;
-            width: 0;
-            &:checked ~ .checkup {
-                background-color: $primary-color;
-                &:after {
-                    opacity: 1;
-                    left: 6px;
+        textarea {
+            background-color: $color-form;
+            border: none;
+            border-radius: 10px;
+            width: 100%;
+            padding: 12px 0 0 15px;
+        }
+        input,
+        textarea {
+            &:active,
+            &:focus {
+                &::placeholder {
+                    font-size: 0;
                 }
             }
         }
-        .checkup {
-            position: absolute;
-            left: 0;
-            height: 20px;
-            width: 20px;
-            background-color: $color-form;
-            border: 1px solid $primary-color;
-            &:after {
-                content: "";
-                position: absolute;
-                left: 0;
-                top: -1px;
-                width: 7px;
-                height: 15px;
-                border: 1px solid $white;
-                border-width: 0 3px 3px 0;
-                transform: rotate(45deg);
-                opacity: 0;
-                transition: opacity 0.25s, left 0.25s;
-            }
-        }
-        .checkbox-info {
-            margin-left: 30px;
-        }
-    }
-    .form-wrapper-checkbox {
-        display: flex;
-        margin-bottom: 25px;
-        &:not(:last-child) {
-            border-bottom: 1px solid $color-form;
-        }
-        label {
+        .checkboxes.checkbox {
             display: inline-block;
             position: relative;
             cursor: pointer;
@@ -168,31 +126,21 @@ form {
                 cursor: pointer;
                 height: 0;
                 width: 0;
-                &:checked ~ span {
+                &:checked ~ .checkup {
+                    background-color: $primary-color;
                     &:after {
                         opacity: 1;
-                        left: 7px;
-                        top: 2px;
-                    }
-                    &::before {
-                        background-color: $primary-color;
+                        left: 6px;
                     }
                 }
             }
-            span {
-                margin-left: 30px;
-                display: flex;
-                align-items: center;
-                &::before {
-                    content: "";
-                    height: 20px;
-                    width: 20px;
-                    background-color: $color-form;
-                    border: 1px solid $primary-color;
-                    display: inline-block;
-                    position: absolute;
-                    left: 0;
-                }
+            .checkup {
+                position: absolute;
+                left: 0;
+                height: 20px;
+                width: 20px;
+                background-color: $color-form;
+                border: 1px solid $primary-color;
                 &:after {
                     content: "";
                     position: absolute;
@@ -200,14 +148,71 @@ form {
                     top: -1px;
                     width: 7px;
                     height: 15px;
-                    border: 3px solid $white;
-                    border-top-width: 0;
-                    border-left-width: 0;
+                    border: 1px solid $white;
+                    border-width: 0 3px 3px 0;
                     transform: rotate(45deg);
                     opacity: 0;
                     transition: opacity 0.25s, left 0.25s;
                 }
             }
+            .checkbox-info {
+                margin-left: 30px;
+            }
         }
-    }
+        .form-wrapper-checkbox {
+            display: flex;
+            margin-bottom: 25px;
+            label {
+                display: inline-block;
+                position: relative;
+                cursor: pointer;
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                    &:checked ~ span {
+                        &:after {
+                            opacity: 1;
+                            left: 7px;
+                            top: 2px;
+                        }
+                        &::before {
+                            background-color: $primary-color;
+                        }
+                    }
+                }
+                span {
+                    margin-left: 30px;
+                    display: flex;
+                    align-items: center;
+                    &::before {
+                        content: "";
+                        height: 20px;
+                        width: 20px;
+                        background-color: $color-form;
+                        border: 1px solid $primary-color;
+                        display: inline-block;
+                        position: absolute;
+                        left: 0;
+                    }
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: -1px;
+                        width: 7px;
+                        height: 15px;
+                        border: 3px solid $white;
+                        border-top-width: 0;
+                        border-left-width: 0;
+                        transform: rotate(45deg);
+                        opacity: 0;
+                        transition: opacity 0.25s, left 0.25s;
+                    }
+                }
+            }
+        }
+    }   
 }

@@ -11,7 +11,9 @@ get_header();
         </div>
         <?php $records = get_field('record_repeater');?>
         <div class="records-form">
-            <?php echo do_shortcode('[contact-form-7 id="357" title="Record Form"]');?>
+            <form action="">
+                <?php echo do_shortcode('[contact-form-7 id="357" title="Record Form"]');?>
+            </form>
         </div>
     </div>
 </div>
